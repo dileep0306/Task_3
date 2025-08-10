@@ -1,0 +1,102 @@
+{
+    "info": {
+        "name": "Books API",
+        "_postman_id": "12345678-1234-5678-1234-567812345678",
+        "description": "Postman collection for testing Books API CRUD operations",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Get All Books",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:3000/books",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "books"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Add a New Book",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"title\": \"Deep Work\", \"author\": \"Cal Newport\"}"
+                },
+                "url": {
+                    "raw": "http://localhost:3000/books",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "books"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Update Book by ID",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"title\": \"The Alchemist - Updated\"}"
+                },
+                "url": {
+                    "raw": "http://localhost:3000/books/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "books",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Delete Book by ID",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:3000/books/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "books",
+                        "1"
+                    ]
+                }
+            }
+        }
+    ]
+}
